@@ -1,0 +1,23 @@
+{
+  "name": "BandzoneDownloader",
+  "description": "Pridá možnosť stiahnuť skladby z bandzone.cz profilov kapiel",
+  "version": "0.1",
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "default_title": "BandzoneDownloader",
+    "default_icon": "gfx/icon.png"
+  },
+
+  "content_scripts": [{
+    "matches": ["http://bandzone.cz/*"],
+    "all_frames": true,
+    "run_at": "document_end",
+    "js": ["js/jquery-3.2.1.min.js", "js/downloader.js", "contentscript.js"]
+  }],
+
+  "manifest_version": 2
+}
