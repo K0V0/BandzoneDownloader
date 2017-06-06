@@ -1,0 +1,24 @@
+0.1
+---
+
+OK - funkcne stahovanie
+
+
+0.2
+---
+
+OK - upozornenie, ze sa treba prihlasit (po klinkuti na suhlas otvorit novu kartu s prihlasenim, stranka sa ani standartne nevracia na profil kapely)
+OK - zmiznut upozornenie po vybere moznosti
+
+
+next
+----
+
+- refreshnut automaticky naotvarane stranky s kapelami (nevyrenderovane potrebne HTML na zikanie potrebnych udajov)
+- grafika, ikonky podla stylu stranky
+- odlisit pomoocu farby ikonky na stiahnutie skladby ktore dal autor iba na pocuvanie a my si ich mienime stiahnut
+od skladieb ktore uz na stiahnutie boli 
+OK - spakovat do CRX (instalacka)
+- pridat readme.MD s nejakym preslovom, ukazkou a linkom na instalacku
+
+ 

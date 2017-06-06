@@ -39,7 +39,13 @@ Downloader.prototype = {
 				});
 			}
 		});
-	}
+	},
+
+	triggerNotLoggedPopup: function() {
+		chrome.runtime.sendMessage({
+			not_logged_in: "true"
+		});
+	},
 }
 
 

@@ -10,8 +10,9 @@ $(document).ready(function() {
 			// prehravac je a aspon jedna pesnicka v nom 
 			if ((songs.children("a.playlist-add").length >= 1) === false) {
 				// uzivatel je pravdepodobne neprihlseny, zobrazit zdrbanie
-				// dorobit
+				downloader.triggerNotLoggedPopup();
 			} else {
+				// vsetko OK
 				downloader.appendLinksWhereNone();
 			}
 		}
