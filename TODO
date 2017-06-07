@@ -11,14 +11,20 @@ OK - upozornenie, ze sa treba prihlasit (po klinkuti na suhlas otvorit novu kart
 OK - zmiznut upozornenie po vybere moznosti
 
 
+0.3
+----
+
+OK - necerpat usera s hlaskou o prihlaseni za kazdym loadom stranky, len po zavreti celeho prehliadaca znova len raz!
+IMMPOSIBRU!!! - refreshnut automaticky naotvarane stranky s kapelami (nevyrenderovane potrebne HTML na zikanie potrebnych udajov)
+OK - grafika, ikonky podla stylu stranky
+OK - odlisit pomoocu farby ikonky na stiahnutie skladby ktore dal autor iba na pocuvanie a my si ich mienime stiahnut
+od skladieb ktore uz na stiahnutie boli 
+OK - spakovat do CRX (instalacka)
+
+
 next
 ----
 
-- refreshnut automaticky naotvarane stranky s kapelami (nevyrenderovane potrebne HTML na zikanie potrebnych udajov)
-- grafika, ikonky podla stylu stranky
-- odlisit pomoocu farby ikonky na stiahnutie skladby ktore dal autor iba na pocuvanie a my si ich mienime stiahnut
-od skladieb ktore uz na stiahnutie boli 
-OK - spakovat do CRX (instalacka)
 - pridat readme.MD s nejakym preslovom, ukazkou a linkom na instalacku
 
  

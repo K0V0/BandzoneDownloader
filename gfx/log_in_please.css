@@ -21,6 +21,7 @@
  	padding: 0.5em 0.5em;
  	margin:0.25em;
  	cursor: pointer;
+ 	display: inline-block;
  }
 
  span#do_login {
@@ -36,4 +37,14 @@
  span#fuck_off {
  	color: #FDD119;
  	text-decoration: underline;
+ }
+
+ a {
+ 	display: block;
+ 	width:100%;
+ 	text-align:center;
+ }
+
+ img {
+ 	max-width: 100%;
  }

@@ -26,7 +26,7 @@ Downloader.prototype = {
 			.attr("href")
 			.match(this.regex_to_get_song_id)[1];
 
-		return $.parseHTML("<a target=\"_blank\" class=\"download ui-audioplayer-icon ui-audioplayer-icon-download\" rel=\"nofollow\" href=\"http://bandzone.cz/track/download/" + song_id + "\" title=\"Stiahnuť '" + $.trim(song_name) + "' cez BandzoneDownloader\" style=\"\">Stiahnuť</a>");
+		return $.parseHTML("<a target=\"_blank\" class=\"download ui-audioplayer-icon ui-audioplayer-icon-download modded-by-kovo\" rel=\"nofollow\" href=\"http://bandzone.cz/track/download/" + song_id + "\" title=\"Stiahnuť '" + $.trim(song_name) + "' cez BandzoneDownloader\" style=\"\">Stiahnuť</a>");
 	},
 
 	appendLinksWhereNone: function() {
