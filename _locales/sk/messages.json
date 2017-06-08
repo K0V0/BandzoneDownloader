@@ -1,0 +1,12 @@
+{
+	"appTitle": { "message": "Bandzone Downloader" },
+	"appDescription": { "message": "Pridá tlačítko stiahnuť do prehrávača v profile kapely na Bandzone.cz pre nepublikované skladby" },
+
+	"log": { "message": "Prihlás" },
+	"in": { "message": "sa" },
+	"loginPlsMsgPart1": { "message": "Tento modul bude pracovať len ak budeš prihlásený." },
+	"loginPlsMsgPart2": { "message": "Po prihlásení treba znovunačítať (refresh) otvorené stránky aby sa objavili chýbajúce tlačítka." },
+	"loginPlsButtonYes": { "message": "Prihlásiť sa" },
+	"loginPlsButtonNo": { "message": "Jebem na to" }
+	
+}
