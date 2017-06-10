@@ -30,6 +30,9 @@ Program ti to oznámi aj v čerp-okne.
 - vyhľadávať novú alebo nespoznanú hudbu
 - hľadať nové ovečky pre svoj kmeň
 
+## Iné
+- grafické rozhranie programu a zdrojový kód môže obsahovať vulgarizmy
+
 
 
 [logo]: https://github.com/K0V0/BandzoneDownloader/blob/628eefa8d0a6ee571198ee0a19200447457249f9/img/logo_github.png?raw=true "BandzoneDownloader"
