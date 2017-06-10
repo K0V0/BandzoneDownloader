@@ -1,5 +1,4 @@
-![BandzoneDownloader][logo]
-
+![BandzoneDownloader][logo]   
 **BandzoneDownloader** je **plugin (rozšírenie) pre Chrome** ktorý na webe **[Bandzone.cz](http://bandzone.cz)** pridá **tlačítka na stiahnutie** tých **skladieb**, ktoré boli určené len na počúvanie cez webový prehrávač a pri ktorých predtým tieto tlačítka chýbali.
 
 ![BandzoneDownloader][example]
