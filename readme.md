@@ -19,8 +19,6 @@ Program ti to oznámi aj v čerp-okne.
 - Zapamätanie si textu a melódie by tiež mohlo byť chápané ako nedovolené kopírovanie diela alebo jeho časti na iný nosič.
 - Skladba sa dá pustiť 500x z internetu, ale čo miesta kde je rušenie na sieť lebo tam Šuvadová posiela vesmírnu energiu?
 - Šírenie skladieb púštaním medzi ľudmi na drinking squatting sessions zvyšuje "hudobnú gramotnosť" a môže pomôcť ľuďom spoznať nové kapely a štýly, prípadne naverbovať nových ľudí do kmeňa.
-
-
 - naviac to vyzerá, že nič sa neporušuje http://bandzone.cz/podminky-pouzivani.html sekcia IV, bod 4
   >Umístěním obsahu uvedeného shora na Bandzone souhlasíte s celosvětovým zpřístupněním tohoto obsahu veřejnosti v nehmotné podobě prostřednictvím portálu Bandzone
 
