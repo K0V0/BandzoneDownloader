@@ -8,7 +8,7 @@ Plugin sa mi zatiaľ nepodarilo nahrať do oficiálneho repozitára (obchodu) pr
 1. **Stiahnuť** [ODTIAĽTO](https://github.com/K0V0/BandzoneDownloader/blob/628eefa8d0a6ee571198ee0a19200447457249f9/bin/BandzoneDownloader.crx?raw=true), buď klinkutím na odkaz a výberom možnosti **uložiť** *alebo* kliknutím pravým myšotlačítkom na odkaz a vybrať **"uložiť cieľ odkazu ako..."**.
 2. V Chrome klikúť hore vpravo tlačidlo na otvorenie **ponuky**, ísť do **nastavení**, potom zvoliť kartu **rozšírenia**
 3. **Nájsť** stiahnutý **súbor** a **potiahnuť ho tam myšou**.
-4. **HOTOVO**, môže sa ísť honiť.
+4. **HOTOVO**, môže sa ísť na to.
 
 ## Používanie
 - Pre funkčnosť programu je **potrebné byť** na Bandzone **prihlásený**, program ťa na to vyzve, otravovať ak je otvorená v nejakej karte stránka a nie si prihlásený ťa bude vždy keď zavreš a znovupustíš celý Chrome.
