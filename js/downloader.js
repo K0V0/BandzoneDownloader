@@ -1,35 +1,47 @@
+// original html on page is modified by some js to make it html5
+// in html5, required information for plugin to work is not available
 
 function Downloader() {
-	this.regex_to_get_song_id = /\?id=([0-9]+)\&do=playlistAdd$/;
-	this.playlist;
-	this.playlist_items;
-
-	this.init();
+	this.HELPER = new DownloaderHelper();
+	this.origPlaylistElems;
+	this.songs = [];
+	//this.init();
 }
 
 Downloader.prototype = {
 	constructor: Downloader,
 
 	init: function() {
-		this.playlist = $("ul.ui-audioplayer-playlist");
-		this.playlist_items = this.playlist.children("li");
+		this.origPlaylistElems = $("body").find('li.track');
+		this.listSongs();
 	},
 
-	generateDownloadLink: function(totok) {
-		var song_name = totok
-			.children("span.ui-audioplayer-song")
-			.children("span.ui-audioplayer-song-wrapper")
-			.children("span.ui-audioplayer-song-title")
-			.text();
-		var song_id = totok
-			.children("a.playlist-add")
-			.attr("href")
-			.match(this.regex_to_get_song_id)[1];
+	listSongs: function() {
+		var totok = this;
+		this.origPlaylistElems.each(function() {
 
-		return $.parseHTML("<a target=\"_blank\" class=\"download ui-audioplayer-icon ui-audioplayer-icon-download modded-by-kovo\" rel=\"nofollow\" href=\"http://bandzone.cz/track/download/" + song_id + "\" title=\"Stiahnuť '" + $.trim(song_name) + "' cez BandzoneDownloader\" style=\"\">Stiahnuť</a>");
+			var play_link = $(this).data('source');
+			var text_elem = $(this).children('strong').first();
+			var title = text_elem.clone().children().remove().end().text();
+			var album = text_elem.clone().children().remove().text();
+			var original_title = text_elem.text();
+
+			var song = {
+				original_title: original_title,
+				title: totok.HELPER.polishNames(title),
+				album: totok.HELPER.polishNames(album),
+				link: totok.HELPER.generateDownloadLink(play_link)
+			};
+
+			totok.songs.push(song);
+		});
 	},
 
-	appendLinksWhereNone: function() {
+	getSongs: function() {
+		return this.songs;
+	},
+
+	appendLinksWhereNone: function() {/*
 		var totok = this;
 		this.playlist_items.each(function() {
 			if ($(this).children("a").hasClass("download") === false) {
@@ -39,13 +51,13 @@ Downloader.prototype = {
 				});
 			}
 		});
-	},
+	*/},
 
-	triggerNotLoggedPopup: function() {
+	/*triggerNotLoggedPopup: function() {
 		chrome.runtime.sendMessage({
 			not_logged_in: "true"
 		});
-	},
+	},*/
 }
 
 

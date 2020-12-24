@@ -1,29 +1,41 @@
 {
   "name": "__MSG_appTitle__",
   "description": "__MSG_appDescription__",
-  "version": "0.3",
+  "version": "0.4",
   "default_locale": "cs",
 
   "permissions": [
-    "tabs",
-    "storage"
+    "activeTab"
   ],
 
   "browser_action": {
     "default_title": "BandzoneDownloader",
-    "default_icon": "gfx/icon.png"
+    "default_icon": "gfx/icon.png",
+    "default_popup": "html/popup.html"
   },
 
   "background": {
-    "scripts": ["js/jquery-3.2.1.min.js", "js/background.js", "js/log_in_please.js"]
+    "scripts": [
+      "js/background.js"
+    ]
   },
 
   "content_scripts": [{
-    "matches": ["http://bandzone.cz/*"],
+    "matches": [
+      "http://bandzone.cz/*",
+      "https://bandzone.cz/*"
+    ],
     "all_frames": true,
-    "run_at": "document_end",
-    "js": ["js/jquery-3.2.1.min.js", "js/downloader.js", "js/contentscript.js"],
-    "css": ["gfx/player_mod.css"]
+    "run_at": "document_start",
+    "js": [
+      "js/jquery-3.2.1.min.js",
+      "js/downloader_helper.js",
+      "js/downloader.js",
+      "js/contentscript.js"
+    ],
+    "css": [
+      "gfx/player_mod.css"
+    ]
   }],
 
   "icons": { 
@@ -35,10 +47,6 @@
     "128": "gfx/icon128.png",
     "256": "gfx/icon256.png"
   },
-
-  "web_accessible_resources": [
-    
-  ],
 
   "manifest_version": 2
 }

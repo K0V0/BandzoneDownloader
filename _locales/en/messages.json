@@ -2,10 +2,6 @@
 	"appTitle": { "message": "Bandzone Downloader" },
 	"appDescription": { "message": "Add option to download unreleased tracks to Bandzone.cz webplayer" },
 
-	"log": { "message": "Log" },
-	"in": { "message": "in" },
-	"loginPlsMsgPart1": { "message": "This extension will work only when you log in." },
-	"loginPlsMsgPart2": { "message": "After login, refresh opened page(s), extra download buttons will appear." },
-	"loginPlsButtonYes": { "message": "Log in" },
-	"loginPlsButtonNo": { "message": "Fuck it" }
+	"downloadAll": { "message": "Download all tracks" }
+
 }
