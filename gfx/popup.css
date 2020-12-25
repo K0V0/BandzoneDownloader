@@ -1,0 +1,51 @@
+body.main {
+    text-align: center;
+    font-size: 1em;
+    background-color: black;
+    color: white;
+    min-width: 320px;
+    margin:0;
+    padding: 0.5em;
+    outline: 0px transparent !important;
+    box-sizing: border-box;
+}
+
+body.main div#songs a {
+    color: white;
+    text-decoration: none;
+}
+
+body.main div#songs a:hover {
+    color: #EBB11D;
+    text-decoration: underline;
+}
+
+body.main button {
+    color: #EBB11D;
+    font-size: 1.25em;
+    font-weight: bold;
+    background-color: black;
+    padding: 0.375em;
+    outline:none;
+    border: 0.25em solid #EBB11D;
+    margin: 0.5em;
+    border-radius: 0.25em;
+    cursor: pointer;
+}
+
+body.main button:hover {
+    background-color: #EBB11D;
+    color: black;
+}
+
+*::-webkit-scrollbar {
+    width: 1em;
+    height: 0.75em;
+    background-color: black; 
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #EBB11D;
+    border-radius: 1em;
+    border: 0.375em solid black;
+}

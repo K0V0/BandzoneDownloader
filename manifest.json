@@ -5,7 +5,8 @@
   "default_locale": "cs",
 
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "downloads"
   ],
 
   "browser_action": {
