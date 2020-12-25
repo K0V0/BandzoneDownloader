@@ -23,7 +23,6 @@ console.log("BandzoneDownloader loaded");
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
 
 	if (request.method == "getSongs") {
-	  	//sendResponse({ data: "testdata" });
 		sendResponse({ data: downloader.getSongs() });
 	} 
   

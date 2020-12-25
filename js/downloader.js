@@ -5,7 +5,6 @@ function Downloader() {
 	this.HELPER = new DownloaderHelper();
 	this.origPlaylistElems;
 	this.songs = [];
-	//this.init();
 }
 
 Downloader.prototype = {
@@ -29,7 +28,7 @@ Downloader.prototype = {
 			var song = {
 				original_title: original_title,
 				title: totok.HELPER.polishNames(title),
-				album: totok.HELPER.polishNames(album),
+				album: totok.HELPER.polishAlbums(album),
 				link: totok.HELPER.generateDownloadLink(play_link)
 			};
 
@@ -39,25 +38,8 @@ Downloader.prototype = {
 
 	getSongs: function() {
 		return this.songs;
-	},
+	}
 
-	appendLinksWhereNone: function() {/*
-		var totok = this;
-		this.playlist_items.each(function() {
-			if ($(this).children("a").hasClass("download") === false) {
-				$(this).append( totok.generateDownloadLink($(this)) );
-				$(this).children("a.download").on('click', function(e) {
-					e.stopPropagation();
-				});
-			}
-		});
-	*/},
-
-	/*triggerNotLoggedPopup: function() {
-		chrome.runtime.sendMessage({
-			not_logged_in: "true"
-		});
-	},*/
 }
 
 
