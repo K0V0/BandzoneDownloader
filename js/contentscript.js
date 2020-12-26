@@ -1,29 +1,48 @@
+function Contentscript() {
+	this.HELPER = new ContentscriptHelper();
+	this.DOWNLOADER = new Downloader();
+}
 
-var downloader = new Downloader();
+Contentscript.prototype = {
+	constructor: Contentscript,
 
-$(document).ready(function() { 
+	init: function() {
+		this.DOWNLOADER.init();
+		this.appendDownloadButtons();
+	},
 
-	downloader.init();
-
-	/*if (downloader.playlist.length == 0) {
-		// pravdepodobne neni na stranke s kapelou a prehravacom
-	} else {
-		if ((songs = downloader.playlist_items).length >= 1) {
-			console.log("aspon 1 pesnicka");
-			
-			downloader.appendLinksWhereNone();
+	appendDownloadButtons: function() {
+		var totok = this;
+		if (this.DOWNLOADER.getSongs().length == 0) {
+			// pravdepodobne neni na stranke s kapelou a prehravacom
+		} else {
+			var songsElements = $('div#playerWidget').find('ul.ui-audioplayer-playlist').children('li');
+			songsElements.each(function() {
+				if ($(this).children('a.download').length == 0) {
+					var hash = md5($(this).find('span.ui-audioplayer-song-wrapper').text());
+					var song = totok.DOWNLOADER.getSongByHash(hash);
+					$(this).append(totok.HELPER.generateDownloadLink(song));
+					$(this).children('a.download').click(function(e) {
+						e.stopPropagation();
+					});
+				}
+			});	
 		}
-	}*/
+	},
 
- 	console.log("BandzoneDownloader ready");
+	getSongs: function() {
+		return this.DOWNLOADER.getSongs();
+	}
+}
+
+var contentScript = new Contentscript();
+
+$(window).on('load', function() { 
+	contentScript.init();
 });
 
-console.log("BandzoneDownloader loaded");
-
 chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
-
 	if (request.method == "getSongs") {
-		sendResponse({ data: downloader.getSongs() });
+		sendResponse({ data: contentScript.getSongs() });
 	} 
-  
 });

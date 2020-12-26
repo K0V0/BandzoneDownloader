@@ -1,7 +1,7 @@
 function DownloaderHelper() {
     this.init();
     this.catching_regex = /^(http\:\/\/|https\:\/\/)?(www)?(bandzone\.cz\/track\/)(play)(\/)(\d+)(.+)$/;
-    this.polishing_regex = /^\s*\d+\s*\.\s*/;
+    this.polishing_regex = /^\r*\n*\s*\d+\s*\.\s*\r*\n*/;
     this.polishing_regex_2 = /^\s*\-\s*/;
 }
 
@@ -17,10 +17,10 @@ DownloaderHelper.prototype = {
     },
 
     polishNames: function(name) {
-        return name.replace(this.polishing_regex, "");
+        return name.replace(this.polishing_regex, "").trim();
     },
 
     polishAlbums: function(album) {
-        return album.replace(this.polishing_regex_2, "");
+        return album.replace(this.polishing_regex_2, "").trim();
     }
 }

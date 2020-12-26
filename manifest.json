@@ -30,8 +30,10 @@
     "run_at": "document_start",
     "js": [
       "js/jquery-3.2.1.min.js",
+      "lib/md5.js",
       "js/downloader_helper.js",
       "js/downloader.js",
+      "js/contentscript_helper.js",
       "js/contentscript.js"
     ],
     "css": [

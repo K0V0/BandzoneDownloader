@@ -26,10 +26,11 @@ Downloader.prototype = {
 			var original_title = text_elem.text();
 
 			var song = {
-				original_title: original_title,
+				original_title: original_title.trim(),
 				title: totok.HELPER.polishNames(title),
 				album: totok.HELPER.polishAlbums(album),
-				link: totok.HELPER.generateDownloadLink(play_link)
+				link: totok.HELPER.generateDownloadLink(play_link),
+				hash: md5(original_title)
 			};
 
 			totok.songs.push(song);
@@ -38,6 +39,14 @@ Downloader.prototype = {
 
 	getSongs: function() {
 		return this.songs;
+	},
+
+	getSongByHash: function(hash) {
+		for (var i=0; i<this.songs.length; i++) {
+			if (this.songs[i].hash == hash) {
+				return this.songs[i];
+			}
+		}
 	}
 
 }
